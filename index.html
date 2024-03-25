@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequency Pitch Trainer</title>
+  <style>
+
+
+#noteButtonsContainer {
+  display: flex; /* Arrange buttons horizontally */
+  /* Optional: Set a width for the container or use flex-wrap for wrapping */
+}
+
+.noteButton span {
+    font-size: 10px;  /* Adjust the size as desired */
+} 
+
+.noteButton {
+  margin: 0; /* Remove margin */
+  padding: 1px; /* Add some padding if needed */
+  width: 40px; /* Example width for uniform buttons */
+}
+
+.noteButton.active {
+    transform: scale(1.1); /* Example pulse effect when active */
+}
+
+.noteName {
+   display: none; /* Note names are initially hidden */
+}
+
+
+  
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    button {
+      margin: 5px;
+      padding: 5px 5px;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    button.active {
+      background-color: lightgreen;
+    }
+    button.wrong {
+      background-color: lightcoral;
+      transition: background-color 0.5s; 
+
+    }
+
+
+    @media (max-width: 768px) {
+  /* Styles for smaller screens (e.g., reduce button width) */
+  .noteButton {
+    width: 60px;
+  }
+}
+
+  </style>
+
+</head>
+<body>
+  <h1>Frequency Ear Trainer</h1>
+  <p>Score: <span id="score">0</span></p>
+  <button id="playButton">Next Note</button>
+  <button id="repeatButton">Repeat Note</button>
+  <div id="noteButtonsContainer"></div>  <label for="noiseCheckbox">Include Noise</label>
+  <input type="checkbox" id="noiseCheckbox">
+  <label for="showNames">Show Names</label>
+  <input type="checkbox" id="showNames">
+
+  <script src="script.js"></script>
+</body>
+</html>
+</html>
